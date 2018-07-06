@@ -1,0 +1,10 @@
+{% extends "personal/header.html" %}
+{% block content %}
+	{% for post in object_list %} <!--iterating through all objects of Post-->
+		<h5>{{ post.date|date:"Y-m-d" }}<a href="/blog/{{post.id}}">  {{ post.title }}</a></h5>
+	{% endfor %}
+{% endblock %} 
+
+<!--
+Django automatically assigns id to each column as a key column. It also iterates id for each element of that column
+-->
